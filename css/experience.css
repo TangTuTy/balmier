@@ -164,7 +164,6 @@
 
 /* ===== Responsive ===== */
 
-/* Medium screens (tablets) */
 @media (max-width: 1024px) {
     .details-left {
         gap: 100px;
