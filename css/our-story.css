@@ -1,0 +1,311 @@
+/* css/our-story.css */
+
+.our-story-page {
+    font-family: 'Alexandria', sans-serif;
+}
+
+.hero-section {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: 'Alexandria', sans-serif;
+}
+
+/* Stories Section */
+.stories {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #fff;
+    margin: 150px;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-height: 400px;
+    height: 537px;
+    color: #000;
+}
+
+/* Both sides take exactly 50% */
+.stories .exclusive-left,
+.stories .exclusive-right {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+/* Images fill their container */
+.exclusive-left img,
+.exclusive-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+/* Story-specific image adjustments */
+.exclusive-left img[src*="story1.png"],
+.exclusive-right img[src*="story1.png"] {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.exclusive-left img[src*="story2.png"],
+.exclusive-right img[src*="story2.png"] {
+    transform: scale(1);
+    object-position: center center;
+}
+
+.exclusive-left img[src*="story3.png"],
+.exclusive-right img[src*="story3.png"] {
+    transform: scale(1);
+    object-position: center center;
+}
+
+.exclusive-left img[src*="story4.png"],
+.exclusive-right img[src*="story4.png"] {
+    transform: scale(1.5);
+    object-position: center center;
+    filter: grayscale(100%);
+}
+
+.exclusive-left img[src*="story5.png"],
+.exclusive-right img[src*="story5.png"] {
+    transform: scale(1);
+    object-position: center center;
+}
+
+/* Text section styling */
+.stories .exclusive-right {
+    padding: 60px 80px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Year styling - small, uppercase, spaced */
+.stories .exclusive-right h3 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    color: #666;
+    text-transform: uppercase;
+    font-family: 'Alexandria', sans-serif;
+}
+
+/* Last h3 in a group gets the bottom margin */
+.stories .exclusive-right h3:last-of-type:not(.emphasis) {
+    margin-bottom: 30px;
+}
+
+/* Main headings - large, bold, spaced */
+.stories .exclusive-right h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 1.1;
+    font-family: 'Alexandria', sans-serif;
+}
+
+/* Last h2 in a group gets the bottom margin */
+.stories .exclusive-right h2:last-of-type {
+    margin-bottom: 40px;
+}
+
+/* Body text - clean, readable */
+.stories .exclusive-right p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 2px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    font-family: 'Alexandria', sans-serif;
+}
+
+.stories .exclusive-right p.small-text {
+    font-size: 11px;
+    margin-bottom: 30px;
+}
+
+/* Last p in a group gets the bottom margin */
+.stories .exclusive-right p:last-of-type {
+    margin-bottom: 30px;
+}
+
+/* Instagram handle styling */
+.stories .exclusive-right h5 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #888;
+    margin-top: 50px;
+    letter-spacing: 1px;
+    font-family: 'Alexandria', sans-serif;
+}
+
+/* Special styling for "THE BIRTH OF Valimiér" section */
+.stories .exclusive-right h2:contains("Valimiér") {
+    font-size: 2.2rem;
+}
+
+/* Style for the decorative "V" if you want to add it */
+.valimier-logo {
+    font-size: 4rem;
+    font-family: 'Serif', serif;
+    font-style: italic;
+    color: #000;
+    margin: 20px 0;
+}
+
+/* Emphasis text styling */
+.stories .exclusive-right h3.emphasis {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    text-transform: none;
+}
+
+/* Alternate left/right layout for even sections */
+.stories:nth-child(even) .exclusive-left {
+    order: 2;
+}
+
+.stories:nth-child(even) .exclusive-right {
+    order: 1;
+}
+
+/* ===== Responsive ===== */
+
+/* Large screens */
+@media (max-width: 1200px) {
+    .stories {
+        margin: 100px 80px;
+    }
+    .stories .exclusive-right {
+        padding: 40px 60px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .stories {
+        flex-direction: column;
+        height: auto;
+        margin: 50px 40px;
+        width: auto;
+    }
+
+    .stories:nth-child(even) .exclusive-left,
+    .stories:nth-child(even) .exclusive-right {
+        order: initial; /* Reset order for stacked layout */
+    }
+
+    .stories .exclusive-left,
+    .stories .exclusive-right {
+        flex: 1 1 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .stories .exclusive-left img,
+    .stories .exclusive-right img {
+        height: 400px; /* Fixed height for images on tablet */
+        transform: scale(1) !important; /* Override inline styles */
+    }
+
+    .stories .exclusive-left img[src*="story3.png"],
+    .stories .exclusive-right img[src*="story3.png"] {
+        object-fit: contain !important;
+        height: auto !important;
+    }
+
+    .stories .exclusive-right {
+        padding: 40px 30px;
+    }
+
+    .stories .exclusive-right h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+        padding: 0 20px;
+    }
+
+    .stories {
+        margin: 40px 20px;
+    }
+
+    .stories .exclusive-left img,
+    .stories .exclusive-right img {
+        height: 300px; /* Adjust height for phones */
+    }
+
+    .stories .exclusive-left img[src*="story3.png"],
+    .stories .exclusive-right img[src*="story3.png"] {
+        object-fit: contain !important;
+        height: auto !important;
+    }
+
+    .stories .exclusive-right {
+        padding: 30px 20px;
+    }
+
+    .stories .exclusive-right h2 {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .stories .exclusive-right p {
+        font-size: 14px;
+    }
+
+    .stories .exclusive-right h5 {
+        margin-top: 30px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .stories .exclusive-right h2 {
+        font-size: 1.4rem;
+    }
+
+    .stories .exclusive-right p {
+        font-size: 13px;
+    }
+}

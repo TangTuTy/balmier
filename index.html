@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIMIÉR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+    
+    <script src="js/header.js" defer></script>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <a href="collection.html" class="cta-button">DISCOVER THE COLLECTION</a>
+            </div>
+        </section>
+        <section class="craft">
+            <div class="craft-content">
+                <h1>VALIMIÉR</h1>
+                <p>THAI CRAFT. GLOBAL DESIGN.</p>
+            </div>
+        </section>
+        <section class="vision">
+            <h2>THE NEW VISION OF FEMININITY.</h2>
+        </section>
+        <section class="paris-collection">
+            <div class="paris-content">
+                <h3>VALIMIER</h3>
+                <h1>SPRING - SUMMER 2025</h1>
+                <p>READY TO WEAR COLLECTION</p>
+                <span>Timeless femininity, reimagined through effortless elegance and contemporary allure.</span>
+            </div>
+        </section>
+        <section class="story-section-1">
+            <div class="story-image">
+                <img src="assets-home/girlsit.png" alt="Girl sitting on a bed">
+            </div>
+            <div class="story-text">
+                <p>A whisper of timeless elegance, captured in soft shadows and graceful silhouettes, where vintage charm meets modern sophistication.</p>
+                <p>This visual diary invites you to embrace the quiet confidence of a true muse.</p>
+            </div>
+        </section>
+        <section class="story-section-2">
+            <div class="story-text">
+                <p>To the world, she may seem like the perfect vision of femininity.</p>
+                <p>But her true essence is power dressed in elegance, wisdom wrapped in grace. She is everyone’s dream, and far beyond.</p>
+                
+                <a href="https://www.instagram.com/reel/DM_32UJRCLC/?igsh=M204bTYwczR2cnIz">Experience the story, watch the video.</a>
+            </div>
+            <div class="story-image">
+                <img src="assets-home/girlwrite.png" alt="Girl writing">
+            </div>
+        </section>
+        <section class="product-section">
+            <div class="product-image">
+                <img src="assets-home/skirt.jpg" alt="Mini satin dress">
+            </div>
+            <div class="product-details">
+                <h1>VOLI COLLECTION - VALIMIER 2025</h1>
+                <h1>THE MINI SATIN DRESS</h1>
+                <a href="https://lin.ee/fpY0srX" class="shop-now-button">SHOP NOW</a>
+                <h3><span class="price-amount">3170</span> <span class="price-currency">Baht</span></h3>
+                <p>Elegant mini dress in White or Black, made from Grace Satin, a durable satin with a smooth finish that resists wrinkles and maintains its shape beautifully.
+maintains its shape beautifully.</p>
+            </div>
+        </section>
+        <section class="two-column-images">
+            <div class="column">
+                <img src="assets-home/girlstand.jpg" alt="Girl standing">
+            </div>
+            <div class="column">
+                <img src="assets-home/girlwithpapernews.png" alt="Girl with newspaper">
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        const footerCss = document.createElement('link');
+        footerCss.rel = 'stylesheet';
+        footerCss.href = 'css/footer.css';
+        document.head.appendChild(footerCss);
+    </script>
+</body>
+</html>

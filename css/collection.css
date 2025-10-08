@@ -1,0 +1,311 @@
+/*
+  CSS for Collection Page
+  Starting from scratch based on detailed Figma analysis.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&family=Castoro+Titling&family=Cormorant:ital,wght@0,400;0,700&family=Prata&display=swap');
+
+/* --- Global Styles & Fonts --- */
+body {
+    background-color: #fff;
+    color: #111;
+    font-family: 'Cormorant', serif;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Reusable Components --- */
+.content-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 120px 40px;
+}
+
+.interstitial-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+}
+
+.interstitial-divider p {
+    font-family: 'Castoro Titling', serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #888;
+    flex-shrink: 0;
+    padding: 0 30px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.interstitial-divider .line {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+
+/* --- Hero Section --- */
+.collection-hero {
+    height: 95vh;
+    background-image: url('../collection-asset/boat.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.collection-hero h1 {
+    font-family: 'Alexandria', sans-serif;
+    font-size: clamp(32px, 4.5vw, 58px);
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.collection-hero p {
+    font-size: clamp(12px, 1.2vw, 14px);
+    letter-spacing: 2px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.collection-hero span {
+    font-size: clamp(11px, 1vw, 13px);
+    margin-top: 25px;
+    max-width: 450px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* --- Main Content Sections --- */
+.content-block-layout {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: clamp(24px, 3vw, 40px);   /* ลดจาก 60px */
+    align-items: start;
+    padding: clamp(24px, 4vh, 40px) 0; /* ลดช่องบน/ล่าง */
+}
+
+
+
+.content-text h2 {
+    font-family: 'Castoro Titling', serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 6px; /* ลดช่อง */
+}
+
+.content-text h1 {
+    font-family: 'Castoro Titling', serif;
+    font-size: 36px; /* ลดนิดให้ไม่ดันบรรทัด */
+    margin: 0 0 12px;
+}
+
+.content-text p {
+    font-family: 'Cormorant', serif;
+    font-size: 14px;
+    line-height: 1.6; /* เดิม 1.8 → ช่องบรรทัดถี่ขึ้น */
+    color: #333;
+    margin: 0; /* ตัด margin default */
+}
+
+.content-gallery {
+    position: relative;
+    padding: 0 20px; /* เดิม 40px → ลดครึ่ง */
+}
+
+.content-gallery > img {
+    margin-bottom: 10px; /* เดิม 15px */
+    display: block;
+}
+
+.content-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.content-gallery .thumbnails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* เดิม 15px */
+    margin-top: 10px;
+}
+
+
+/* --- Vertical Text --- */
+.vertical-text {
+    position: absolute;
+    top: 0;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #aaa;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+}
+
+.vt-left {
+    left: 0;
+}
+
+.vt-right {
+    right: 0;
+}
+
+/* --- Sizing Section --- */
+.sizing-section {
+    padding: 100px 40px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.sizing-section h1:nth-of-type(1) {
+    font-family: 'Prata', serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.sizing-section h1:nth-of-type(2) {
+    font-family: 'Castoro Titling', serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.sizing-section p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.sizing-product-info {
+    font-family: 'Castoro Titling', serif;
+}
+
+.sizing-currency {
+    font-family: 'Cormorant', serif;
+}
+
+.shop-now-button {
+    border: 1px solid #000;
+    padding: 15px 40px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #000;
+    background-color: transparent;
+    display: inline-block;
+    margin-bottom: 60px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Castoro Titling', serif;
+}
+
+.shop-now-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.sizing-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* = center */
+}
+
+
+/* --- Image Showcase Section --- */
+.image-showcase-section {
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.image-showcase-section h1 {
+    font-family: 'Prata', serif;
+    font-size: clamp(32px, 4.5vw, 58px);
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.image-showcase-section p {
+    font-family: 'Prata', serif;
+    font-size: clamp(12px, 1.2vw, 14px);
+    letter-spacing: 2px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+/* 1) ปล่อยให้ section สูงตามเนื้อหา (อย่า fix 40vh) */
+.image-duo-row-section{
+  padding-block: clamp(24px, 4vh, 56px);
+  /* height: 40vh;  <-- ลบ */
+}
+
+/* 2) ใช้ grid/flex ก็ได้ อันนี้ใช้ grid + gap จะคุมง่าย */
+.image-duo-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 3vw, 40px);
+  align-items: stretch;
+}
+
+/* 3) กล่องของรูป: คุมสัดส่วน + เฟรมขาว (ถ้าต้องการ) */
+.image-duo-row .duo-item{
+  position: relative;
+  aspect-ratio: 3 / 4;      /* ความสูงสัมพันธ์กับความกว้าง */
+  background: #fff;
+  padding: 20px;            /* ขอบขาวเท่ากันทุกใบ */
+  /* ลบ background-size/position/repeat เดิมทิ้ง */
+}
+
+/* 4) ให้รูป “พอดีกล่อง” ไม่โดนครอป และไม่ล้น */
+.image-duo-row .duo-item img{
+  position: absolute;
+  inset: 20px;              /* วางภายใน padding (เท่ากับ padding ของ parent) */
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  object-fit: contain;      /* เห็นขอบ/ตัวหนังสือในไฟล์ครบ */
+  display: block;
+}
+
+/* (ออปชัน) จำกัดความกว้างรวมเพื่อไม่ให้ใหญ่เกิน */
+.image-duo-row-section{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.story-video-link {
+    color: #888; /* Light grey */
+    text-decoration: underline;
+}

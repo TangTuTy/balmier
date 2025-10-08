@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIMIÉR - Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/collection.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="collection-hero">
+            <h1>SPRING - SUMMER 2025</h1>
+            <p>READY TO WEAR COLLECTION</p>
+            <span>Timeless femininity, reimagined through effortless elegance and contemporary allure.</span>
+        </section>
+
+        <div class="interstitial-divider">
+            <div class="line"></div>
+            <p>GRACE IN THE SUN, CHIC FOR EVERY MOMENT.</p>
+            <div class="line"></div>
+        </div>
+
+        <section class="image-showcase-section" style="background-image: url('collection-asset/view.png');">
+            <!-- No text content here -->
+        </section>
+
+        <div class="interstitial-divider">
+            <div class="line"></div>
+            <p>TIMELESS ELEGANCE, DESIGNED TO SHINE FROM DAY TO NIGHT.</p>
+            <div class="line"></div>
+        </div>
+
+        <section class="image-showcase-section" style="background-image: url('collection-asset/girlback.png');">
+            <h1>VALIMIÉR</h1>
+            <p>THAI CRAFT. GLOBAL DESIGN.</p>
+        </section>
+
+        <div class="content-wrapper">
+
+            <section class="content-block-layout">
+                <div class="content-text">
+                    <h1>VOL.I COLLECTION 2025</h1>
+                    <h1>THE MINI SATIN DRESS</h1>
+                    <p>Elegant mini dress in Ivory or Black, made from Grace Satin, a durable satin with a smooth finish that maintains its shape beautifully.</p>
+                </div>
+                <div class="content-gallery">
+                    
+                    <img src="collection-asset/dress.jpg" alt="Mini Satin Dress">
+                    
+                </div>
+            </section>
+
+            <section class="image-duo-row-section">
+                <div class="image-duo-row">
+                    <div class="duo-item">
+                        <img src="../collection-asset/halddress1.jpg" alt="">
+                    </div>
+                    <div class="duo-item">
+                        <img src="../collection-asset/halddress2.jpg" alt="">
+                    </div>    
+                </div>
+            </section>
+
+            <section class="content-block-layout">
+                <div class="content-text">
+                    <h1>LOOK 01</h1>
+                    <h1>TIMELESS IVORY</h1>
+                    <p>A whisper of timeless elegance, captured in soft shadows and graceful silhouettes.</p>
+                </div>
+                <div class="content-gallery">
+                    
+                    <div class="image-stack">
+                        <img src="collection-asset/halfgirlstand.png" alt="Look 1">
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section class="content-block-layout">
+                <div class="content-text">
+                    <h1>LOOK 02</h1>
+                    <h1>CLASSY BLACK</h1>
+                    <p>Where vintage charm meets modern sophistication, this visual diary invites you to embrace the quiet confidence of a true muse.</p>
+                </div>
+                <div class="content-gallery">
+                    
+                    <div class="image-stack">
+                        <img src="collection-asset/halfhouse.png" alt="Look 2 detail">
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section class="content-block-layout">
+                <div class="content-text">
+                    <p>To the world, she may seem like the perfect vision of femininity. But her true essence is power dressed in elegance, wisdom wrapped in grace. Because sweetness has never limited what she can be...</p>
+                </div>
+                <div class="content-gallery">
+                    
+                    <div class="image-stack">
+                        <img src="collection-asset/halfgirlsit.png" alt="Look 3">
+                    </div>
+                   
+                </div>
+            </section>
+
+            <section class="content-block-layout">
+                <div class="content-text">
+                    <p>She is everyone’s dream,  
+and far beyond.</p>
+                    <p><a href="https://www.instagram.com/reel/DM_32UJRCLC/?igsh=M204bTYwczR2cnIz" class="story-video-link">Experience the story, watch the video.</a></p>
+                </div>
+                <div class="content-gallery">
+                    
+                    <div class="image-stack">
+                        <img src="collection-asset/halfgirlwrite.png" alt="Thai Craft Image 1">
+                    </div>
+                   
+                </div>
+            </section>
+
+            <section class="content-block-layout">
+                <div class="content-text">
+                    <h1>THAI CRAFT</h1>
+                    <h1>GLOBAL STANDARD.</h1>
+                </div>
+                <div class="content-gallery">
+                    
+                    <div class="image-stack">
+                        <img src="collection-asset/logo.png" alt="Thai Craft Image 1">
+                        
+                    </div>
+                    
+                </div>
+            </section>
+
+        </div>
+
+        <section class="sizing-section">
+            <h1>VALIMIÉR</h1>
+            <h1>"THE NEW VISION OF FEMININITY"</h1>
+            <p><span class="sizing-product-info">SATIN MINI DRESS  3170</span>  <span class="sizing-currency">BAHT</span></p>
+            <a href="https://lin.ee/fpY0srX" class="shop-now-button">SHOP NOW</a>
+            <img src="collection-asset/size.png" alt="Sizing Chart">
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/header.js" defer></script>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        const footerCss = document.createElement('link');
+        footerCss.rel = 'stylesheet';
+        footerCss.href = 'css/footer.css';
+        document.head.appendChild(footerCss);
+    </script>
+
+</body>
+</html>
