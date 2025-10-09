@@ -262,7 +262,7 @@ a {
 }
 
 .two-column-images .column:first-child img {
-    object-position: center;
+    object-position: 0 0%;
 }
 
 .two-column-images .column:last-child img {
@@ -270,6 +270,12 @@ a {
 }
 
 /* ===== Responsive ===== */
+
+@media (max-width: 1024px) {
+    .two-column-images .column:first-child img {
+        object-position: center;
+    }
+}
 
 @media (max-width: 768px) {
     .story-section-1,
