@@ -27,7 +27,7 @@ a {
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url('../assets-home/girlstand.jpg');
+    background-image: url('../assets-home/girlstand.webp');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@ a {
 .craft {
     width: 100%;
     height: 100vh;
-    background-image: url('../assets-home/girlback.png');
+    background-image: url('../assets-home/girlback.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@ a {
 /* Paris Collection Section */
 .paris-collection {
     height: 100vh;
-    background-image: url('../assets-home/paris.png');
+    background-image: url('../assets-home/paris.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -262,7 +262,7 @@ a {
 }
 
 .two-column-images .column:first-child img {
-    object-position: 0 0%;
+    object-position: center;
 }
 
 .two-column-images .column:last-child img {
@@ -290,6 +290,7 @@ a {
 
     .two-column-images .column img {
         height: auto;
+        object-position: center;
     }
 
     .paris-content h1,

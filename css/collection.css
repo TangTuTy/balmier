@@ -63,7 +63,7 @@ img {
 /* --- Hero Section --- */
 .collection-hero {
     height: 95vh;
-    background-image: url('../collection-asset/boat.png');
+    background-image: url('../collection-asset/boat.webp');
     background-size: cover;
     background-position: center;
     display: flex;
