@@ -126,7 +126,7 @@ img {
 
 .content-text p {
     font-family: 'Cormorant', serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6; /* เดิม 1.8 → ช่องบรรทัดถี่ขึ้น */
     color: #333;
     margin: 0; /* ตัด margin default */
@@ -308,4 +308,54 @@ img {
 .story-video-link {
     color: #888; /* Light grey */
     text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 60px 20px;
+    }
+
+    .interstitial-divider {
+        padding: 40px 20px;
+    }
+
+    .interstitial-divider p {
+        font-size: 9px;
+        padding: 0 15px;
+    }
+
+    .content-block-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .content-text {
+        text-align: center;
+    }
+
+    .content-text h1 {
+        font-size: 28px;
+    }
+
+    .content-text p {
+        font-size: 14px;
+    }
+
+    .image-duo-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sizing-section {
+        padding: 60px 20px;
+    }
+
+    .sizing-section h1 {
+        font-size: 32px;
+    }
+
+    .vertical-text {
+        display: none;
+    }
 }

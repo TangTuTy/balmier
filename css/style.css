@@ -174,7 +174,13 @@ a {
     max-width: 100%;
 }
 
-.story-text p,
+.story-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #000;
+}
+
 .product-details p {
     font-size: 14px;
     line-height: 1.6;
@@ -242,7 +248,6 @@ a {
 .two-column-images {
     display: flex;
     height: 100vh;
-    background-color: #fff;
 }
 
 .two-column-images .column {
@@ -283,6 +288,10 @@ a {
         height: auto;
     }
 
+    .two-column-images .column img {
+        height: auto;
+    }
+
     .paris-content h1,
     .craft-content h1 {
         font-size: 32px;
@@ -290,5 +299,9 @@ a {
 
     .product-details h1 {
         font-size: 28px;
+    }
+
+    .story-text p {
+        font-size: 14px;
     }
 }

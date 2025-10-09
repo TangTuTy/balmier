@@ -109,16 +109,16 @@
 .faq-block{ margin:20px 0 32px; }
 .faq-chapter{
   font-family: 'Almarai', sans-serif;
-  font-weight:normal; color:#888; margin:0 0 10px; font-size:18px;
+  font-weight:normal; color:#515151; margin:0 0 10px; font-size:18px;
 }
 .faq-item{ 
   font-family: 'Alexandria', sans-serif;
   margin:14px 0 18px; 
 }
-.faq-q{ margin:0 0 16px; font-weight:800; color:#656565; }
+.faq-q{ margin:0 0 16px; font-weight:800; color:#515151; }
 .faq-q em{ font-style:normal; font-weight:700; }
-.faq-a p{ margin:4px 0; line-height:1.7; color:#888; }
-.faq-link, .u{ text-decoration:underline; text-underline-offset:2px; color:#111; }
+.faq-a p{ margin:4px 0; line-height:1.7; color:#515151; }
+.faq-link, .u{ text-decoration:underline; text-underline-offset:2px; color:#515151; }
 
 /* ---------- Sizing guide ---------- */
 .sizing-guide{
@@ -134,7 +134,10 @@
 .sizing-guide img{ max-width:100%; }
 
 /* ---------- Responsibility (คงเดิม) ---------- */
-.responsibility{ text-align:left; padding:56px 0 72px; }
+.responsibility{ 
+  text-align:left; 
+  padding:56px 24px 72px;
+}
 .responsibility h2{
   font-family:'Prata',serif;
   font-size:48px; letter-spacing:.08em; text-align:center; margin:0 0 40px;
@@ -143,7 +146,7 @@
 .responsibility-section-right-image{
   display:grid;
   grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);
-  gap:40px; align-items:center; max-width:1140px; margin:0 auto 48px; padding:0 24px;
+  gap:40px; align-items:center; max-width:1140px; margin:0 auto 48px;
 }
 .responsibility-section-right-image{
   grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
@@ -160,7 +163,7 @@
   text-align:center; color:#666; line-height:1.8; max-width:840px; margin:32px auto 24px; padding:0 24px;
 }
 .responsibility-gallery-2{
-  display:flex; gap:20px; align-items:stretch; max-width:1140px; margin:24px auto 8px; padding:0 24px;
+  display:flex; gap:20px; align-items:stretch; max-width:1140px; margin:24px auto 8px;
 }
 .responsibility-gallery-2 .gallery-item-2 img{
   width:100%; height:100%; object-fit:cover; border-radius:12px;
@@ -179,7 +182,8 @@
   .contact-hero h1{ font-size:52px; }
   .social-icons img{ width:72px; height:72px; }
   .service-icons img{ width:88px; height:88px; }
-  .info-block .info{ font-size:16px; }
+  .info-block .info p{ font-size:16px; }
+  .faq-chapter { font-size: 16px; }
 
   .responsibility-section-left-image,
   .responsibility-section-right-image{
@@ -187,27 +191,32 @@
   }
   .responsibility-gallery-2{ flex-direction:column; }
 }
+
 @media (max-width:768px){
   .faq-title{ font-size:38px; }
-}
-/* contact.css */
-.contact-page .social-icons img { width: 88px; height: 88px; object-fit: contain; display: block; filter: grayscale(100%); }
-.contact-page .service-icons img { width: 88px; height: 88px; object-fit: contain; display: block; }
-
-.social-icons img.ig {
-  filter: brightness(0);   /* ทำให้เป็นดำ */
+  .contact-hero h1 { font-size: 42px; }
+  .responsibility h2 { font-size: 38px; }
+  .icon-row.social-icons { justify-content: center; gap: 20px; }
 }
 
+@media (max-width: 480px) {
+    .contact-hero h1 { font-size: 32px; }
+    .contact-hero p { font-size: 14px; }
+    .contact-block h2 { font-size: 16px; text-align: center; }
+    .icon-row { justify-content: center; }
+    .icon-row.social-icons { flex-wrap: wrap; justify-content: center; gap: 15px;}
+    .social-icons img { width: 40px; height: 40px; }
+    .service-icons img { width: 50px; height: 50px; }
+    .info-block .info p { font-size: 14px; text-align: center; }
+    .faq-title { font-size: 28px; }
+    .faq-chapter { font-size: 10px; }
+    .faq-q { font-size: 8px; }
+    .faq-a p { font-size: 8px; }
+    .responsibility h2 { font-size: 28px; }
+    .responsibility-text p { font-size: 8px; }
+    .responsibility-footer p { font-size: 8px; color: #515151; max-width: 100%; }
+}
 
-/* ===== FORCE OVERRIDES (ชั่วคราวเพื่อให้เห็นผลทันที) ===== */
-/* .contact-page .icon-row img,
-.contact-page .social-icons img,
-.contact-page .service-icons img{
-  width: 120px !important;
-  height: 120px !important;
-  object-fit: contain;
-  display: block;
-} */
 .sizing-section {
     padding: 100px 40px;
     text-align: center;
