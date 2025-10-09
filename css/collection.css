@@ -63,7 +63,7 @@ img {
 /* --- Hero Section --- */
 .collection-hero {
     height: 95vh;
-    background-image: url('../collection-asset/boat.webp');
+    background-image: url('../collection-asset/boat.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -335,11 +335,11 @@ img {
     }
 
     .content-text h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .content-text p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .image-duo-row {
